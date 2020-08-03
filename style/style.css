@@ -1,0 +1,138 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: grey;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+}
+
+#game-board {
+  display: none;
+  -ms-grid-columns: (1fr)[21];
+      grid-template-columns: repeat(21, 1fr);
+  -ms-grid-rows: (1fr)[21];
+      grid-template-rows: repeat(21, 1fr);
+  background-color: black;
+  height: 100vmin;
+  width: 100vmin;
+}
+
+#start-screen {
+  background-image: -webkit-gradient(linear, left top, right top, from(#0f2027), color-stop(#203a43), to(#2c5364));
+  background-image: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  height: 100vmin;
+  width: 100vmin;
+  text-align: center;
+}
+
+#start-screen h1 {
+  color: #7cb083;
+  -webkit-animation-name: animate;
+          animation-name: animate;
+  font-size: 35px;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-duration: .8s;
+          animation-duration: .8s;
+}
+
+#start-screen button {
+  font-size: 20px;
+  font-weight: bolder;
+  cursor: pointer;
+  -webkit-animation-name: appear;
+          animation-name: appear;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+}
+
+#start-screen .position {
+  position: relative;
+  top: 40%;
+}
+
+#end-screen {
+  background-image: -webkit-gradient(linear, left top, right top, from(#0f2027), color-stop(#203a43), to(#2c5364));
+  background-image: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  height: 100vmin;
+  width: 100vmin;
+  text-align: center;
+  display: none;
+}
+
+#end-screen h1 {
+  color: #a6fff2;
+}
+
+#end-screen p {
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: #a6fff2;
+}
+
+#end-screen button {
+  font-weight: bold;
+}
+
+#end-screen .position {
+  position: relative;
+  top: 40%;
+}
+
+.snake {
+  background-color: green;
+  border: lightblue 1px solid;
+}
+
+.apple {
+  background-color: red;
+}
+
+/* Keyframes */
+@-webkit-keyframes animate {
+  0% {
+    font-size: 0px;
+  }
+  100% {
+    font-size: 35px;
+  }
+}
+@keyframes animate {
+  0% {
+    font-size: 0px;
+  }
+  100% {
+    font-size: 35px;
+  }
+}
+
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */
